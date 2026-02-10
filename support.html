@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Buzz-Kill</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000000;
+            color: #32CD32;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            text-align: center;
+            padding: 1rem 1rem;
+            background: #000000;
+            border-bottom: 2px solid #32CD32;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(50, 205, 50, 0.1);
+        }
+
+        .back-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #32CD32;
+            color: #000000;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #ffffff;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .logo {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 2rem;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #32CD32;
+            letter-spacing: -2px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0;
+            text-shadow: 0 0 20px #32CD32;
+        }
+
+        main {
+            flex: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            width: 100%;
+            margin-top: 100px;
+            margin-bottom: 2rem;
+        }
+
+        .support-content {
+            background: #1a1a1a;
+            border-radius: 12px;
+            border: 2px solid #32CD32;
+            padding: 2.5rem;
+        }
+
+        .support-content h2 {
+            color: #32CD32;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 15px rgba(50, 205, 50, 0.5);
+        }
+
+        .support-content h3 {
+            color: #32CD32;
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .support-content p {
+            color: #cccccc;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .contact-box {
+            background: #000000;
+            border: 2px solid #32CD32;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .email-link {
+            display: inline-block;
+            background: #32CD32;
+            color: #000000;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .email-link:hover {
+            background: #ffffff;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(50, 205, 50, 0.5);
+        }
+
+        .info-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #0a0a0a;
+            border-left: 4px solid #32CD32;
+            border-radius: 4px;
+        }
+
+        .info-section ul {
+            color: #cccccc;
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .info-section li {
+            margin-bottom: 0.75rem;
+        }
+
+        footer {
+            background: #000000;
+            color: #32CD32;
+            text-align: center;
+            padding: 2rem 1rem;
+            border-top: 2px solid #32CD32;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+            color: #cccccc;
+        }
+
+        footer a {
+            color: #32CD32;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #32CD32;
+        }
+
+        @media (max-width: 768px) {
+            .back-button {
+                left: 1rem;
+                font-size: 0.75rem;
+                padding: 0.5rem 0.8rem;
+            }
+
+            .logo {
+                right: 1rem;
+                font-size: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            main {
+                padding: 1.5rem 1rem;
+                margin-top: 80px;
+            }
+
+            .support-content {
+                padding: 1.5rem;
+            }
+
+            .support-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .support-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .contact-box {
+                padding: 1.5rem;
+            }
+
+            .email-link {
+                font-size: 1rem;
+                padding: 0.8rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-button">
+            <span>←</span>
+            <span>Back to Home</span>
+        </a>
+        <h1>Support</h1>
+        <div class="logo">BK</div>
+    </header>
+
+    <main>
+        <div class="support-content">
+            <h2>We're Here to Help!</h2>
+            
+            <p>
+                Have a question, concern, or need assistance with Buzz-Kill? Our support team is ready to help you get the most out of your experience.
+            </p>
+
+            <div class="contact-box">
+                <h3>Contact Support</h3>
+                <p style="color: #cccccc; margin-bottom: 0.5rem;">Send us an email and we'll get back to you as soon as possible</p>
+                <a href="mailto:support@buzz-kill.app" class="email-link">support@buzz-kill.app</a>
+            </div>
+
+            <h3>What We Can Help With</h3>
+            <div class="info-section">
+                <ul>
+                    <li>Technical issues and troubleshooting</li>
+                    <li>Account and subscription questions</li>
+                    <li>Feature requests and feedback</li>
+                    <li>Payment and billing inquiries</li>
+                    <li>Privacy and security concerns</li>
+                    <li>General questions about Buzz-Kill</li>
+                </ul>
+            </div>
+
+            <h3>Before You Contact Us</h3>
+            <p>
+                To help us assist you more quickly, please include the following information in your email:
+            </p>
+            <div class="info-section">
+                <ul>
+                    <li>A clear description of your issue or question</li>
+                    <li>Your device type and operating system</li>
+                    <li>Screenshots (if applicable)</li>
+                    <li>Steps to reproduce the issue (if reporting a bug)</li>
+                    <li>Your account email (if account-related)</li>
+                </ul>
+            </div>
+
+            <h3>Response Time</h3>
+            <p>
+                We typically respond to support inquiries within 24-48 hours during business days. For urgent matters, please mention "URGENT" in your email subject line.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Buzz-Kill. All rights reserved.</p>
+        <nav>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-use.html">Terms of Use</a>
+            <a href="support.html">Support</a>
+        </nav>
+    </footer>
+</body>
+</html>
