@@ -13,7 +13,8 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0E0E13;
+            background: linear-gradient(to bottom, #0E0E13 0%, #1a0f2e 50%, #7C3AED 100%);
+            background-attachment: fixed;
             color: #7C3AED;
             line-height: 1.6;
             min-height: 100vh;
@@ -66,10 +67,10 @@
 
         @keyframes glow {
             0%, 100% {
-                text-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
             }
             50% {
-                text-shadow: 0 0 30px rgba(124, 58, 237, 0.9), 0 0 50px rgba(124, 58, 237, 0.5);
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.9), 0 0 50px rgba(255, 255, 255, 0.5);
             }
         }
 
@@ -224,7 +225,7 @@
         .saying-card p {
             font-size: 3rem;
             line-height: 1.4;
-            color: #7C3AED;
+            color: #ffffff;
             font-weight: 300;
             width: 100%;
             padding: 2rem;
@@ -234,7 +235,7 @@
 
         .saying-card p:hover {
             transform: scale(1.05);
-            color: #ffffff;
+            color: #7C3AED;
         }
 
         .saying-with-image {
