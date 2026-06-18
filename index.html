@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buzz-Kill - Your Money Wingman</title>
+    <title>Buzz-Kill - Keep it under control.</title>
     <style>
         * {
             margin: 0;
@@ -12,10 +12,9 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to bottom, #0E0E13 0%, #1a0f2e 50%, #7C3AED 100%);
-            background-attachment: fixed;
-            color: #7C3AED;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #000000;
+            color: #8B66FF;
             line-height: 1.6;
             min-height: 100vh;
             display: flex;
@@ -88,14 +87,15 @@
         header {
             text-align: center;
             padding: 1rem 1rem;
-            background: #0E0E13;
-            border-bottom: 2px solid #7C3AED;
+            background: rgba(0, 0, 0, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #8B66FF;
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            box-shadow: 0 5px 20px rgba(124, 58, 237, 0.1);
+            box-shadow: 0 5px 20px rgba(139, 92, 246, 0.2);
         }
 
         .logo {
@@ -103,12 +103,15 @@
             top: 50%;
             transform: translateY(-50%);
             right: 2rem;
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #ffffff;
-            letter-spacing: 0.05em;
-            text-transform: lowercase;
+            height: 2.5rem;
+            width: 2.5rem;
             opacity: 0.9;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .download-badge {
@@ -119,7 +122,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: #7C3AED;
+            background: #8B66FF;
             color: #ffffff;
             padding: 0.6rem 1.2rem;
             border-radius: 8px;
@@ -130,10 +133,9 @@
         }
 
         .download-badge:hover {
-            background: #ffffff;
-            color: #0E0E13;
-            transform: scale(1.05);
-            animation: float 2s ease-in-out infinite;
+            background: #A78BFA;
+            color: #ffffff;
+            transform: translateY(-50%) scale(1.05);
         }
 
         .help-button {
@@ -146,21 +148,20 @@
             justify-content: center;
             width: 2.5rem;
             height: 2.5rem;
-            background: #7C3AED;
+            background: #8B66FF;
             color: #ffffff;
             border-radius: 50%;
             text-decoration: none;
             font-size: 1.5rem;
             font-weight: bold;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(124, 58, 237, 0.3);
+            box-shadow: 0 4px 10px rgba(139, 92, 246, 0.4);
         }
 
         .help-button:hover {
-            background: #ffffff;
-            color: #0E0E13;
+            background: #A78BFA;
             transform: translateY(-50%) scale(1.1);
-            box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+            box-shadow: 0 6px 15px rgba(139, 92, 246, 0.6);
         }
 
         .download-badge svg {
@@ -178,8 +179,13 @@
 
         .tagline {
             font-size: 0.9rem;
-            color: #ffffff;
-            font-style: italic;
+            color: #888888;
+            font-style: normal;
+        }
+        
+        .tagline .highlight {
+            color: #8B66FF;
+            font-weight: 600;
         }
 
         main {
@@ -235,7 +241,7 @@
 
         .saying-card p:hover {
             transform: scale(1.05);
-            color: #7C3AED;
+            color: #8B66FF;
         }
 
         .saying-with-image {
@@ -250,14 +256,14 @@
             max-width: 300px;
             height: auto;
             border-radius: 12px;
-            border: 2px solid #7C3AED;
-            box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+            border: 2px solid #8B66FF;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
             transition: all 0.3s ease;
         }
 
         .saying-with-image img:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(124, 58, 237, 0.6);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
         }
 
         .saying-with-image p {
@@ -292,10 +298,11 @@
         .cta-section {
             text-align: center;
             padding: 3rem 1rem;
-            background: #1a1a1f;
+            background: #000000;
             border-radius: 12px;
-            border: 2px solid #7C3AED;
+            border: 2px solid #8B66FF;
             margin-bottom: 2rem;
+            box-shadow: 0 0 40px rgba(139, 92, 246, 0.15);
         }
 
         .cta-section h2 {
@@ -330,25 +337,25 @@
         }
 
         .btn-primary {
-            background: #7C3AED;
+            background: #8B66FF;
             color: #ffffff;
         }
 
         .btn-primary:hover {
-            background: #ffffff;
-            color: #0E0E13;
+            background: #A78BFA;
+            color: #ffffff;
             transform: scale(1.05);
-            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+            box-shadow: 0 5px 20px rgba(139, 92, 246, 0.4);
         }
 
         .btn-secondary {
             background: transparent;
-            color: #7C3AED;
-            border: 2px solid #7C3AED;
+            color: #8B66FF;
+            border: 2px solid #8B66FF;
         }
 
         .btn-secondary:hover {
-            background: #7C3AED;
+            background: #8B66FF;
             color: #ffffff;
             transform: scale(1.05);
         }
@@ -356,8 +363,8 @@
         footer {
             text-align: center;
             padding: 2rem 1rem;
-            color: #888888;
-            border-top: 1px solid rgba(124, 58, 237, 0.3);
+            color: #666666;
+            border-top: 1px solid rgba(139, 92, 246, 0.2);
         }
 
         @media (max-width: 768px) {
@@ -448,9 +455,97 @@
                 opacity: 0.7;
             }
         }
+
+        /* Loading Screen Styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        #loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        .loader-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .lightning-bolt {
+            fill: #FFFFFF;
+            transform-origin: center;
+            animation: boltFadeIn 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        .circle-path {
+            fill: none;
+            stroke: #8B66FF;
+            stroke-width: 6;
+            stroke-linecap: round;
+            stroke-dasharray: 565;
+            stroke-dashoffset: 565;
+            animation: drawCircle 1.5s ease-out forwards;
+            animation-delay: 0.3s;
+        }
+
+        @keyframes boltFadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes drawCircle {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .main-content {
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+
+        .main-content.visible {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-container">
+            <svg class="loader-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circle that draws around -->
+                <circle class="circle-path" cx="100" cy="100" r="85"/>
+                
+                <!-- Lightning Bolt (matching app icon style) -->
+                <path class="lightning-bolt" d="M120 50 L80 105 L95 105 L75 150 L120 95 L105 95 Z" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
     <header>
         <a href="#" class="download-badge">
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -459,8 +554,9 @@
             Click Here to Download
         </a>
         <a href="#help-section" class="help-button">?</a>
-        <h1>Buzz-Kill</h1>
-        <div class="logo">buzz-kill</div>
+        <p class="tagline">Keep it <span class="highlight">under control.</span></p>
+        <h1>Buzz-<span style="color: #8B66FF;">Kill</span></h1>
+        <div class="logo"><img src="App-Icon-1024x1024-fixed@1x.png" alt="Buzz-Kill App Icon"></div>
     </header>
 
     <main>
@@ -468,37 +564,31 @@
             <div class="saying-card">
                 <div class="saying-with-image">
                     <p>"Because pints shouldn't cost your tuition."</p>
-                    <img src="AppPhoto1.PNG" alt="Buzz-Kill App Photo 1">
+                    <img src="IMG_1385.PNG" alt="Buzz-Kill App Photo 1">
                 </div>
             </div>
             <div class="saying-card">
                 <div class="saying-with-image">
-                    <img src="AppPhoto2.PNG" alt="Buzz-Kill App Photo 2">
+                    <img src="IMG_1386.PNG" alt="Buzz-Kill App Photo 2">
                     <p>"Keep the <strong>buzz</strong> going—<strong>kill</strong> the overspend."</p>
                 </div>
             </div>
             <div class="saying-card">
                 <div class="saying-with-image">
                     <p>"Know the damage before the hangover."</p>
-                    <img src="AppPhoto3.PNG" alt="Buzz-Kill App Photo 3">
+                    <img src="IMG_1387.PNG" alt="Buzz-Kill App Photo 3">
                 </div>
             </div>
             <div class="saying-card">
                 <div class="saying-with-image">
-                    <img src="AppPhoto4.PNG" alt="Buzz-Kill App Photo 4">
+                    <img src="IMG_1388.PNG" alt="Buzz-Kill App Photo 4">
                     <p>"The morning-after money check… solved."</p>
                 </div>
             </div>
             <div class="saying-card">
                 <div class="saying-with-image">
                     <p>"Before you buy another round… check <strong>Buzz-Kill</strong>."</p>
-                    <img src="AppPhoto5.PNG" alt="Buzz-Kill App Photo 5">
-                </div>
-            </div>
-            <div class="saying-card">
-                <div class="saying-with-image">
-                    <img src="AppPhoto6.PNG" alt="Buzz-Kill App Photo 6">
-                    <p>"Your tab, uncensored."</p>
+                    <img src="IMG_1389.PNG" alt="Buzz-Kill App Photo 5">
                 </div>
             </div>
         </div>
@@ -518,13 +608,15 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Buzz-Kill. Stay lit, not broke. 🍻</p>
+        <p>&copy; 2026 Buzz-<span style="color: #8B66FF;">Kill</span>. Keep it under control. ⚡</p>
         <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-            <a href="privacy-policy.html" style="color: #7C3AED; text-decoration: none;">Privacy Policy</a> | 
-            <a href="terms-of-use.html" style="color: #7C3AED; text-decoration: none;">Terms of Use</a> | 
-            <a href="support.html" style="color: #7C3AED; text-decoration: none;">Support</a>
+            <a href="privacy-policy.html" style="color: #8B66FF; text-decoration: none;">Privacy Policy</a> | 
+            <a href="terms-of-use.html" style="color: #8B66FF; text-decoration: none;">Terms of Use</a> | 
+            <a href="support.html" style="color: #8B66FF; text-decoration: none;">Support</a>
         </p>
     </footer>
+    </div>
+    <!-- End Main Content -->
 
     <script>
         // Intersection Observer to trigger animations on scroll
@@ -541,6 +633,21 @@
         // Observe all saying cards
         document.querySelectorAll('.saying-card').forEach(card => {
             observer.observe(card);
+        });
+
+        // Loading screen animation
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const loadingScreen = document.getElementById('loading-screen');
+                const mainContent = document.querySelector('.main-content');
+                
+                loadingScreen.classList.add('fade-out');
+                mainContent.classList.add('visible');
+                
+                setTimeout(function() {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 2300); // Show loading animation for 2.3 seconds
         });
     </script>
 </body>
